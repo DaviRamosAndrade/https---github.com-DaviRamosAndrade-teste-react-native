@@ -1,25 +1,37 @@
+// React import's
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // Pages imports
-import HomeScreen from '../pages/Inicio/Inicio';
+import LoginScreen from '../pages/Login/Login';
 import Procedimentos from '../pages/Cadastro/Procedimentos'
+import Usuarios from '../pages/Cadastro/UsuarioSistema';
+import Inicio from '../pages/Inicio/Inicio';
+import ListaProcedimento from '../pages/Procedimento/Listar';
 
-const Stack = createNativeStackNavigator();
+const { Navigator, Screen } = createNativeStackNavigator();
 
 export default function Router() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Inicio"
-          component={HomeScreen}
-          options={{ title: 'Welcome' }}
+      <Navigator screenOptions={{ headerShown: false }}>
+        <Screen
+          name="Login"
+          component={LoginScreen}
         />
-        <Stack.Screen 
-        name="Procedimentos" 
-        component={Procedimentos} />
-      </Stack.Navigator>
+        <Screen
+          name="Procedimentos"
+          component={Procedimentos} />
+        <Screen
+          name="Usuarios"
+          component={Usuarios} />
+        <Screen
+          name="Inicio"
+          component={Inicio} />
+        <Screen
+          name="ListaProcedimento"
+          component={ListaProcedimento} />
+      </Navigator>
     </NavigationContainer>
   );
 }

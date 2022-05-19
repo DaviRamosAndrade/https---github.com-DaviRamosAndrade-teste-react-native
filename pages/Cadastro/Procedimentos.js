@@ -1,8 +1,11 @@
-import { Text } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
-
-const Procedimentos = ({ navigation, route }) => {
-    return <Text>This is {route.params.name}'s profile</Text>;
+const Procedimentos = () => {
+  return (
+    <View>
+      <Text>Procedimentos</Text>
+    </View>
+  );
 };
 
 export default Procedimentos;

@@ -1,13 +1,10 @@
-import { Button } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = () => {
   return (
-    <Button
-      title="Go to Jane's profile"
-      onPress={() =>
-        navigation.navigate('Profile', { name: 'Jane' })
-      }
-    />
+    <View>
+      <Text>Home</Text>
+    </View>
   );
 };
 
